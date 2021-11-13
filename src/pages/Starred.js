@@ -1,8 +1,10 @@
+import MainPageLayout from '../components/MainPageLayout'
+
 const Starred = () => {
   return (
-    <div>
+    <MainPageLayout>
       This is Starred
-    </div>
+    </MainPageLayout>
   )
 }
 

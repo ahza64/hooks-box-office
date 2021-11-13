@@ -1,8 +1,10 @@
+import MainPageLayout from '../components/MainPageLayout'
+
 const Home = () => {
   return (
-    <div>
+    <MainPageLayout>
       This is Home
-    </div>
+    </MainPageLayout>
   )
 }
 
