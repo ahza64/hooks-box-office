@@ -1,9 +1,11 @@
 import ShowCard from './ShowCard'
 
+import { FlexGrid } from '../styled'
+
 import IMAGE_NOT_FOUND from '../../images/not-found.png'
 
 const ShowGrid = ({ data }) => {
-  return <div>
+  return <FlexGrid>
     {
       data.map( ({ show }) => (
         <ShowCard
@@ -11,11 +13,11 @@ const ShowGrid = ({ data }) => {
           id={show.id}
           name={show.name}
           image={show.image ? show.image.medium : IMAGE_NOT_FOUND}
-          summary={show.summary} 
+          summary={show.summary}
         />
       ))
     }
-  </div>
+  </FlexGrid>
 }
 
 export default ShowGrid
