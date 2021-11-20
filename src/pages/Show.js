@@ -80,12 +80,12 @@ const Show = () => {
         <Seasons seasons={show._embedded.seasons} />
       </div>
 
-      <div>
-        <h2>Cast</h2>
-        <Cast cast={show._embedded.cast} />
-      </div>
     </div>
   )
 }
+// <div> API no longer supports this
+// <h2>Cast</h2>
+// <Cast cast={show._embedded.cast} />
+// </div>
 
 export default Show
