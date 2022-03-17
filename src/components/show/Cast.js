@@ -1,5 +1,5 @@
 import IMG_PLACEHOLDER from '../../images/not-found.png'
-
+// this data is no longer supported from the API and isn't being used in the app
 const Cast = ({ cast }) => {
   return (
     <div>

@@ -47,14 +47,14 @@ const Show = () => {
   }, [id])
 
   console.log('show', show);
-  //
-  // if (isLoading) {
-  //   return <div>Data is being loaded</div>
-  // }
-  //
-  // if (error) {
-  //   return <div>Error occured: {error}</div>
-  // }
+
+  if (isLoading) {
+    return <div>Data is being loaded</div>
+  }
+
+  if (error) {
+    return <div>Error occured: {error}</div>
+  }
 
   return (
     <div>
@@ -82,10 +82,10 @@ const Show = () => {
 
     </div>
   )
+  // <div> API no longer supports this data
+  // <h2>Cast</h2>
+  // <Cast cast={show._embedded.cast} />
+  // </div>
 }
-// <div> API no longer supports this
-// <h2>Cast</h2>
-// <Cast cast={show._embedded.cast} />
-// </div>
 
 export default Show
