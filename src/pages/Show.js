@@ -5,6 +5,7 @@ import ShowMainData from '../components/show/ShowMainData'
 import Details from '../components/show/Details'
 import Seasons from '../components/show/Seasons'
 import Cast from '../components/show/Cast'
+import { ShowPageWrapper, InfoBlock } from './Show.styled'
 
 const reducer = (prevState, action) => {
   switch(action.type) {
@@ -57,7 +58,7 @@ const Show = () => {
   }
 
   return (
-    <div>
+    <ShowPageWrapper>
       <ShowMainData
         image={show.image}
         name={show.name}
@@ -66,21 +67,21 @@ const Show = () => {
         tags={show.genres}
       />
 
-      <div>
+      <InfoBlock>
         <h2>Details</h2>
         <Details
           status={show.status}
           network={show.network}
           premiered={show.premiered}
         />
-      </div>
+      </InfoBlock>
 
-      <div>
+      <InfoBlock>
         <h2>Seasons</h2>
         <Seasons seasons={show._embedded.seasons} />
-      </div>
+      </InfoBlock>
 
-    </div>
+    </ShowPageWrapper>
   )
   // <div> API no longer supports this data
   // <h2>Cast</h2>
